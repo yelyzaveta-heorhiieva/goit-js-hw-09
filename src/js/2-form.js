@@ -20,8 +20,8 @@ if (formDataLocal) {
 
 
 form.addEventListener("input", (evt) => {
-    formData.email = input.value;
-    formData.message = textarea.value;
+    formData.email = input.value.trim();
+    formData.message = textarea.value.trim();
   localStorage.setItem(localStorageKey, JSON.stringify(formData));
 });
 
